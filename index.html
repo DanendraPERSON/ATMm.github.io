@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Simulation</title>
+</head>
+<body>
+
+    <script>
+        // Inisialisasi saldo dan PIN (simulasi)
+        var saldo_awal = 1000;
+        var nomor_PIN = "1234";
+
+        // Meminta pengguna untuk memasukkan nomor kartu
+        var nomor_kartu = prompt("Masukkan nomor kartu: ");
+
+        // Memverifikasi nomor kartu
+        if (nomor_kartu === "1234567890") { // Contoh nomor kartu valid
+            // Meminta pengguna untuk memasukkan PIN
+            var entered_PIN = prompt("Masukkan PIN: ");
+
+            // Memverifikasi PIN
+            if (entered_PIN === nomor_PIN) {
+                // Menampilkan saldo
+                alert("Saldo Anda saat ini: $" + saldo_awal);
+            } else {
+                alert("PIN salah. Transaksi dibatalkan.");
+            }
+        } else {
+            alert("Nomor kartu tidak valid. Transaksi dibatalkan.");
+        }
+    </script>
+
+</body>
+</html>
